@@ -45,4 +45,14 @@ public class ProductController {
 		return service.findByProductIdNative(id);
 	}
 
+	@GetMapping("/allj")
+	public List<Product> findAllProductJPQL(){
+		return service.findAllProductsJPQL();
+	}
+
+	@GetMapping("/alls")
+	public List<Product> findAllProductSQL(){
+		return service.findAllProductsSQL();
+	}
+
 }
